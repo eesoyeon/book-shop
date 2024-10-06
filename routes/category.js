@@ -1,14 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-// const { body, validationResult } = require('express-validator');
+const { allCategory } = require('../controller/CategoryController');
 
-const {
-    join,
-    login,
-    passwordResetRequest,
-    passwordRest,
-} = require('../controller/UserController');
+// const { body, param, validationResult } = require('express-validator');
 
 router.use(express.json());
 
@@ -25,9 +20,8 @@ router.use(express.json());
 //     }
 // };
 
-router.post('/join', join);
-router.post('/login', login);
-router.post('/reset', passwordResetRequest);
-router.put('/reset', passwordRest);
+// 순서 중요 ***
+
+router.get('/', allCategory); // 카테고리 전체 조회
 
 module.exports = router;

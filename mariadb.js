@@ -1,13 +1,13 @@
-// // Get the client
-// const mysql = require('mysql2');
+// Get the client
+const mariadb = require('mysql2');
 
-// // Create the connection to database
-// const connection = mysql.createConnection({
-//     host: '127.0.0.1',
-//     user: 'root',
-//     password: 'root',
-//     database: 'BookShop',
-//     dateStrings: true,
-// });
+// Create the connection to database
+const connection = mariadb.createConnection({
+    host: '127.0.0.1',
+    user: 'root',
+    password: 'root',
+    database: 'Bookshop',
+    dateStrings: true,
+});
 
-// module.exports = connection;
+module.exports = connection;
